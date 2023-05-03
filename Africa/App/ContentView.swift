@@ -40,6 +40,8 @@ struct ContentView: View {
         }
     }
     
+  
+    
     // MARK: - Body
     var body: some View {
         NavigationView {
@@ -56,6 +58,8 @@ struct ContentView: View {
                             }//: LINK
                             
                         }//: LOOP
+                        CreditsView()
+                            .modifier(CenterModifier())
                     } //: LIST
                 } else {
                     ScrollView(.vertical, showsIndicators: false) {
@@ -67,7 +71,12 @@ struct ContentView: View {
                             } //: LOOP
                         } //: GRID
                         .padding(10)
-                        .animation(.easeIn)
+                        .animation(
+                            Animation
+                            .easeIn,
+                            value: UUID())
+                        CreditsView()
+                            .modifier(CenterModifier())
                     } //: SCROLL
                 } //: CONDITION
             } //: GROUP
