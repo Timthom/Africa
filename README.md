@@ -3,4 +3,5 @@
 A swiftUI project
 
 
-![](Africa.mp4)
+![Africa](Africa.png)
+
